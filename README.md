@@ -16,7 +16,17 @@ github中空间有限，此项目中data与算法模型文件（PaddleVideo）�
 * 在数据处理上，训练集与测试集采用不同的分割方式。
 * 在模型构建上，本方案采用PaddleVideo中的BMN模型。此模型引入边界匹配(Boundary-Matching, BM)机制来评估proposal的置信度，按照proposal开始边界的位置及其长度将所有可能存在的proposal组合成一个二维的BM置信度图，图中每个点的数值代表其所对应的proposal的置信度分数。网络由三个模块组成，基础模块作为主干网络处理输入的特征序列，TEM模块预测每一个时序位置属于动作开始、动作结束的概率，PEM模块生成BM置信度图。
 ![](https://ai-studio-static-online.cdn.bcebos.com/1a8deac1f6fb4f7abc6ff65b692a9e16c76ccb6d890949ea98aa1324f0df30dd)
-
+### 项目文件结构
+```python
+!tree -L 1
+```
+├── data
+├── main.ipynb
+├── PaddleVideo
+├── README.md
+├── work
+├── 说明文档.docx
+└── 整体结构图.png
 
 
 ## 数据处理
