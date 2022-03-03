@@ -137,14 +137,14 @@ resume_epoch可以设置为指定的checkpoint并继续训练，训练后权重�
 ```
 
 ## 提升思路
-*1.在官方提供的[baseline](https://aistudio.baidu.com/aistudio/projectdetail/3389378)基础上增加训练的epoch数量
-*2.采用多步长衰减与Warmup的余弦退火衰减等多种学习率调整方法，其A榜测试提交得分对比如下：
-学习率调整策略	15epoch
-decay 策略（learningrate：[0.001->0.0001->0.00001]）	44.83078
-warm up策略（max_learningrate=[0.001]）	44.76696
-warm up策略（max_learningrate=[0.002]）	44.52029
-average checkpoint策略（最近5个epoch）	44.22303
-可见其多种学习率调整策略对该数据结果相差不大。
-*3.基于每4秒一分的划分方法上，将滑动窗口的步长改为2秒，保证测试集动作的完整性，优化特征数据。
-*4.采用非极大抑制算法合并测试结果
+* 1.在官方提供的[baseline](https://aistudio.baidu.com/aistudio/projectdetail/3389378)基础上增加训练的epoch数量
+* 2.采用多步长衰减与Warmup的余弦退火衰减等多种学习率调整方法，其A榜测试提交得分对比如下：
+* 学习率调整策略	15epoch
+* decay 策略（learningrate：[0.001->0.0001->0.00001]）	44.83078
+* warm up策略（max_learningrate=[0.001]）	44.76696
+* warm up策略（max_learningrate=[0.002]）	44.52029
+* average checkpoint策略（最近5个epoch）	44.22303
+* 可见其多种学习率调整策略对该数据结果相差不大。
+* 3.基于每4秒一分的划分方法上，将滑动窗口的步长改为2秒，保证测试集动作的完整性，优化特征数据。
+* 4.采用非极大抑制算法合并测试结果
 
