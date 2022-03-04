@@ -1,6 +1,7 @@
 
 # 基于飞桨实现乒乓球时序动作定位大赛 ：B榜第4名方案
 ##
+团队名称：syy_bsu的团队
 github中空间有限，此项目中data与算法模型文件（PaddleVideo）参见https://aistudio.baidu.com/aistudio/projectdetail/3544826?contributionType=1 下载
 
 ## 赛题介绍
